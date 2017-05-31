@@ -1,12 +1,6 @@
 fileFormatVersion: 2
 guid: 4ae85c04161638e4f98ce7546caea76b
 folderAsset: yes
-<<<<<<< HEAD
-timeCreated: 1496222241
-=======
-timeCreated: 1496220355
->>>>>>> 3a462151a40c246c6d3f871dba31311544befa0b
-licenseType: Free
 PluginImporter:
   serializedVersion: 2
   iconMap: {}
@@ -14,21 +8,6 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 0
   platformData:
-    data:
-      first:
-        '': Editor
-      second:
-        enabled: 0
-        settings:
-          CPU: AnyCPU
-          OS: OSX
-    data:
-      first:
-        Android: Android
-      second:
-        enabled: 0
-        settings:
-          CPU: ARMv7
     data:
       first:
         Any: 
@@ -41,9 +20,7 @@ PluginImporter:
       second:
         enabled: 1
         settings:
-          CPU: AnyCPU
           DefaultValueInitialized: true
-          OS: OSX
     data:
       first:
         Standalone: OSXIntel

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour {
 
-    [SerializeField,Range(-20,50)]
+    [SerializeField,Range(-20,80)]
     float speed = 3;
 
 	// Use this for initialization

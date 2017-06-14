@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour {
+public class Car : MonoBehaviour
+{
+    public Vector3 offset;
 
-    [SerializeField,Range(-20,80)]
-    float speed = 3;
+    Transform ovrPlayerController;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        ovrPlayerController = GameObject.FindObjectOfType<OVRPlayerController>().gameObject.transform;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
+        transform.position = ovrPlayerController.position+offset;
 	}
+
+
 }

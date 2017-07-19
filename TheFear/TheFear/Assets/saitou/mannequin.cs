@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class mannequin : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
 
->>>>>>> b2d37b9692a5c1612dea5d6baaaa65c6aff06c25
     //--------------------------------------
     // public
     //--------------------------------------
 
-<<<<<<< HEAD
+
     public GameObject manequinAdd; //マネキン
     public GameObject manequinCar; //車に座っているマネキン
     public GameObject manequinParent; //マネキンの親オブジェクト
@@ -20,15 +17,11 @@ public class mannequin : MonoBehaviour
 
     public int Limit = 0; //マネキンを出す数
     public int manequinDisplay = 0; //車に座っているマネキンを表示するタイミング
-=======
-    public GameObject manequinsAdd; //マネキン用
->>>>>>> b2d37b9692a5c1612dea5d6baaaa65c6aff06c25
 
     //--------------------------------------
     // private
     //--------------------------------------
 
-<<<<<<< HEAD
     int current = 0; //現在のウェーブ
     float dis = 10;
 
@@ -113,24 +106,11 @@ public class mannequin : MonoBehaviour
 
             //生成したマネキンの距離が他とくっついていたらtrue
             if (dis < 5) manequinDistanceFlg = true;
-=======
-    int currentWave = 0; //現在のウェーブ
-    public List<GameObject> manequinLis = new List<GameObject>();
-
-    void Start()
-    {
-        //全部隠す
-        foreach (Transform t in manequinsAdd.transform)
-        {
-            manequinLis.Add(t.gameObject);
-            t.gameObject.SetActive(false);
->>>>>>> b2d37b9692a5c1612dea5d6baaaa65c6aff06c25
         }
     }
 
     void OnTriggerEnter(Collider hit)
     {
-<<<<<<< HEAD
         if (hit.tag == "Player")
         {
             instantiateFlg = true;
@@ -161,13 +141,6 @@ public class mannequin : MonoBehaviour
 
         return randomPos;
     }
-=======
-        if(hit.tag == "Player" && manequinLis.Count > currentWave)
-        {
-            //ウェーブを増やす
-            manequinLis[currentWave].SetActive(true);
-            currentWave++;
-        }
-    }
->>>>>>> b2d37b9692a5c1612dea5d6baaaa65c6aff06c25
+
+    
 }

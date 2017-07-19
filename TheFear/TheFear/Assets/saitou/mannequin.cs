@@ -11,6 +11,7 @@ public class mannequin : MonoBehaviour
     public GameObject manequinAdd; //マネキン
     public GameObject manequinCar; //車に座っているマネキン
     public GameObject manequinParent; //マネキンの親オブジェクト
+    public Animator manequinAnim;
 
     public int Limit = 0; //マネキンを出す数
     public int manequinDisplay = 0; //車に座っているマネキンを表示するタイミング
@@ -26,17 +27,18 @@ public class mannequin : MonoBehaviour
     bool swich_RightLeft; //左右どちらに表示させるかを切り替えるFlg
     bool manequinDistanceFlg; //生成するマネキンの距離が、他のマネキンと一定距離離れているかを判定するFlg
 
-    //List<Vector3> manequinPos = new List<Vector3>(); //生成したオブジェクト座標を記憶
     List<GameObject> manequinObjLis = new List<GameObject>(); //生成したオブジェクトを記憶
 
     Vector3 randomPos; //ランダムに取得した座標を保存
 
     GameObject manequinObj; //生成したオブジェクト
 
+    Color materialArm;
 
     void Start()
     {
         manequinCar.SetActive(false);
+        manequinAnim.SetBool("ArmAnimationFlg", false);
     }
 
     void Update()
@@ -45,8 +47,8 @@ public class mannequin : MonoBehaviour
         if (current == manequinDisplay)
         {
             manequinCar.SetActive(true);
+            manequinAnim.SetBool("ArmAnimationFlg", true);
         }
-
         ManequinPosSetting();
     }
 
